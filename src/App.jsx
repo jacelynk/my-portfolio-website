@@ -1,36 +1,36 @@
-import Navbar from './components/Navbar.jsx';
+import './styles/global.css';
+import Navbar from './components/Navbar';
 import './App.css';
+import RevealCircle from './components/RevealCircle';
+import bgImg from './assets/img/JACELYN A. CARATAO 1.png';
+import nameImg from './assets/img/JACELYN A. CARATAO.png';
 
 function App() {
   return (
-    <div>
+    <div
+      className="App"
+      style={{
+        minHeight: '100vh',
+        width: '100vw',
+        background: `url(${bgImg}) center/cover no-repeat fixed`,
+        position: 'relative',
+        overflow: 'hidden',
+      }}
+    >
       <Navbar />
-      <main>
-        <section id="about">
-          <h2>Hello, I’m Jacelyn 👋</h2>
-          <p>Welcome to my portfolio website!</p>
-        </section>
-      </main>
+      <RevealCircle />
+      <div style={{
+        display: 'flex',
+        flexDirection: 'column',
+        alignItems: 'center',
+        marginTop: '1.5rem',
+        position: 'relative',
+        zIndex: 2
+      }}>
+        <img src={nameImg} alt="Jacelyn A. Caratao" style={{ maxWidth: '90vw', height: 'auto' }} />
+      </div>
     </div>
   );
-
-<main>
-  <section id="about">
-    <h2>About Me</h2>
-    <p>I’m a front-end developer specializing in React and UI/UX design.</p>
-  </section>
-
-  <section id="projects">
-    <h2>Projects</h2>
-    <p>Here are a few projects I've worked on recently...</p>
-  </section>
-
-  <section id="contact">
-    <h2>Contact</h2>
-    <p>Email me at: jacelyn@example.com</p>
-  </section>
-</main>
-
 }
 
 export default App;
