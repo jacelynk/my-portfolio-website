@@ -2,7 +2,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 1.2rem 0.5rem;
+  padding: 0.7rem 0.2rem;
   background: #F7A8C4;
   position: fixed;
   top: 0;
@@ -14,7 +14,7 @@
 
 .nav-links {
   display: flex;
-  gap: 6rem;
+  gap: 3rem;
   list-style: none;
   margin: 0 auto;
   padding: 0;
@@ -24,7 +24,7 @@
   text-decoration: none;
   color: #E53888 !important;
   font-weight: 500;
-  font-size: 1.13rem;
+  font-size: 1rem;
   font-family: 'Segoe UI', 'Inter', Arial, sans-serif;
   transition: color 0.2s;
   letter-spacing: 0.08em;
