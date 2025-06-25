@@ -7,30 +7,67 @@ import nameImg from './assets/img/JACELYN A. CARATAO.png';
 
 function App() {
   return (
-    <div
-      className="App"
-      style={{
-        minHeight: '105vh',
-        width: '99vw',
-        background: `url(${bgImg}) center center/cover no-repeat fixed`,
-        position: 'relative',
-        overflow: 'hidden',
-      }}
-    >
+    <div className="App" style={{ minHeight: '100vh', width: '100vw', background: `url(${bgImg}) center center/cover no-repeat` }}>
       <Navbar />
-      <div style={{ marginLeft: '3rem', marginTop: '-1rem' }}>
+      {/* Hero Section */}
+      <section style={{
+        minHeight: '540px',
+        display: 'flex',
+        flexDirection: 'column',
+        alignItems: 'center',
+        justifyContent: 'center',
+        paddingTop: '5.5rem', // to clear navbar
+        paddingBottom: '2.5rem',
+        position: 'relative',
+        textAlign: 'center',
+      }}>
         <RevealCircle />
-        <div style={{
-          display: 'flex',
-          flexDirection: 'column',
-          alignItems: 'center',
-          marginTop: '1.5rem',
-          position: 'relative',
-          zIndex: 2
-        }}>
-          <img src={nameImg} alt="Jacelyn A. Caratao" style={{ maxWidth: '90vw', height: 'auto' }} />
+        <img src={nameImg} alt="Jacelyn A. Caratao" style={{ maxWidth: '90vw', height: 'auto', margin: '2rem 0 0.5rem 0' }} />
+        <div style={{ color: '#b3005e', fontWeight: 500, fontSize: '1.2rem', marginBottom: '2.5rem' }}>
+          Hi I'm Jacelyn. A UI/UX Developer and Graphic Artist.
         </div>
-      </div>
+        <div style={{ display: 'flex', justifyContent: 'center', flexWrap: 'wrap', gap: '1rem', marginTop: '1.5rem' }}>
+          <button className="bago-btn">About</button>
+          <button className="bago-btn">Certs</button>
+          <button className="bago-btn">Projects</button>
+          <button className="bago-btn">Art Works</button>
+          <button className="bago-btn">Skills</button>
+          <button className="bago-btn">Contact</button>
+        </div>
+      </section>
+      {/* White Section */}
+      <section style={{
+        background: '#fff',
+        padding: '2.5rem 1rem',
+        borderRadius: '24px',
+        maxWidth: '900px',
+        margin: '0 auto 2.5rem auto',
+        boxShadow: '0 4px 24px rgba(0,0,0,0.06)',
+        marginTop: '-2.5rem', // overlap hero
+        zIndex: 2,
+        position: 'relative',
+      }}>
+        <h2 style={{ color: '#b3005e', fontWeight: 'bold', textAlign: 'center', marginBottom: '1rem', fontSize: '1.5rem' }}>
+          Hi I'm Jacelyn. A UI/UX Developer and Graphic Artist.
+        </h2>
+        <p style={{ color: '#b3005e', textAlign: 'center', marginBottom: '2rem', fontWeight: 500 }}>
+          Motivated 3rd-year Computer Science student studying in University of Caloocan City - North Campus with strong foundations in programming and UI/UX design. Actively involved in campus tech organizations and eager to apply problem-solving and teamwork skills in a hands-on internship environment.
+        </p>
+        <div style={{ display: 'flex', justifyContent: 'center', gap: '1.5rem', marginBottom: '2rem' }}>
+          <span style={{ color: '#b3005e', fontSize: '2rem', background: '#fff', borderRadius: '8px', padding: '0.3em 0.5em' }}>🌐</span>
+          <span style={{ color: '#b3005e', fontSize: '2rem', background: '#fff', borderRadius: '8px', padding: '0.3em 0.5em' }}>💼</span>
+          <span style={{ color: '#b3005e', fontSize: '2rem', background: '#fff', borderRadius: '8px', padding: '0.3em 0.5em' }}>📌</span>
+          <span style={{ color: '#b3005e', fontSize: '2rem', background: '#fff', borderRadius: '8px', padding: '0.3em 0.5em' }}>🎨</span>
+        </div>
+        <h3 style={{ color: '#b3005e', fontWeight: 'bold', textAlign: 'center', marginBottom: '1.5rem', fontSize: '1.2rem' }}>
+          Campus Involvement
+        </h3>
+        <div style={{ display: 'flex', justifyContent: 'center', gap: '1.5rem', flexWrap: 'wrap' }}>
+          <div className="bago-btn" style={{ minWidth: 180, textAlign: 'center' }}>SKILLS DEVELOPED</div>
+          <div className="bago-btn" style={{ minWidth: 180, textAlign: 'center' }}>SUBJECTS TAKEN</div>
+          <div className="bago-btn" style={{ minWidth: 180, textAlign: 'center' }}>ORGANIZATIONS</div>
+        </div>
+      </section>
     </div>
   );
 }
