@@ -2,31 +2,56 @@ import './styles/global.css';
 import Navbar from './components/Navbar';
 import './App.css';
 import RevealCircle from './components/RevealCircle';
-import bgImg from './assets/img/bago.png';
+import bgImg from './assets/img/JACELYN A. CARATAO (2).png';
 import nameImg from './assets/img/JACELYN A. CARATAO.png';
 
 function App() {
   return (
-    <div className="App" style={{ minHeight: '100vh', width: '100vw', background: `url(${bgImg}) center center/cover no-repeat` }}>
+    <div className="App" style={{ minHeight: '100vh', width: '100vw', background: '#fff', position: 'relative', overflow: 'hidden' }}>
       <Navbar />
+      {/* Background image directly below navbar, no space above, fits screen width */}
+      <div style={{ position: 'relative', width: '100vw', height: 'auto', display: 'flex', alignItems: 'flex-start', justifyContent: 'center', margin: 0, padding: 0, overflow: 'hidden', flexDirection: 'column' }}>
+        <div style={{ position: 'absolute', top: '10px', left: '50%', transform: 'translateX(-50%)', zIndex: 2, display: 'flex', flexDirection: 'column', alignItems: 'center', width: '100%' }}>
+          <RevealCircle />
+          <img src={nameImg} alt="Jacelyn A. Caratao" style={{ maxWidth: '340px', height: 'auto', margin: '10px 0 4px 0' }} />
+          <div style={{ color: '#b3005e', fontWeight: 500, fontSize: '1.1rem', marginBottom: '8px' }}>
+            Hi I'm Jacelyn. A UI/UX Developer and Graphic Artist.
+          </div>
+        </div>
+        <img 
+          src={bgImg} 
+          alt="Background Clouds" 
+          style={{
+            display: 'block',
+            position: 'relative',
+            top: 0,
+            left: 0,
+            width: '100vw',
+            height: 'auto',
+            objectFit: 'contain',
+            maxWidth: '100vw',
+            pointerEvents: 'none',
+            userSelect: 'none',
+            opacity: 1
+          }}
+        />
+      </div>
       {/* Hero Section */}
       <section style={{
         minHeight: '540px',
         display: 'flex',
         flexDirection: 'column',
         alignItems: 'center',
-        justifyContent: 'center',
-        paddingTop: '5.5rem', // to clear navbar
-        paddingBottom: '2.5rem',
+        justifyContent: 'flex-start',
+        paddingTop: '0',
+        paddingBottom: '1.2rem',
+        marginTop: '0',
         position: 'relative',
         textAlign: 'center',
+        zIndex: 1,
       }}>
-        <RevealCircle />
-        <img src={nameImg} alt="Jacelyn A. Caratao" style={{ maxWidth: '90vw', height: 'auto', margin: '2rem 0 0.5rem 0' }} />
-        <div style={{ color: '#b3005e', fontWeight: 500, fontSize: '1.2rem', marginBottom: '2.5rem' }}>
-          Hi I'm Jacelyn. A UI/UX Developer and Graphic Artist.
-        </div>
-        <div style={{ display: 'flex', justifyContent: 'center', flexWrap: 'wrap', gap: '1rem', marginTop: '1.5rem' }}>
+        {/* Button group just below the image */}
+        <div style={{ display: 'flex', justifyContent: 'center', flexWrap: 'wrap', gap: '0.7rem', marginTop: '0.7rem' }}>
           <button className="bago-btn">About</button>
           <button className="bago-btn">Certs</button>
           <button className="bago-btn">Projects</button>
