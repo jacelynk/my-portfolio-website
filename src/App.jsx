@@ -11,10 +11,10 @@ function App() {
       <Navbar />
       {/* Background image directly below navbar, no space above, fits screen width */}
       <div style={{ position: 'relative', width: '100vw', height: 'auto', display: 'flex', alignItems: 'flex-start', justifyContent: 'center', margin: 0, padding: 0, overflow: 'hidden', flexDirection: 'column' }}>
-        <div style={{ position: 'absolute', top: '10px', left: '50%', transform: 'translateX(-50%)', zIndex: 2, display: 'flex', flexDirection: 'column', alignItems: 'center', width: '100%' }}>
+        <div style={{ position: 'absolute', top: '10px', left: '50%', transform: 'translateX(-50%) translateY(35vh)', zIndex: 2, display: 'flex', flexDirection: 'column', alignItems: 'center', width: '100%' }}>
           <RevealCircle />
-          <img src={nameImg} alt="Jacelyn A. Caratao" style={{ maxWidth: '340px', height: 'auto', margin: '10px 0 4px 0' }} />
-          <div style={{ color: '#b3005e', fontWeight: 500, fontSize: '1.1rem', marginBottom: '8px' }}>
+          <img src={nameImg} alt="Jacelyn A. Caratao" style={{ maxWidth: '510px', height: 'auto', margin: '15px 0 8px 0' }} />
+          <div style={{ color: '#b3005e', fontWeight: 500, fontSize: '1.65rem', marginBottom: '12px' }}>
             Hi I'm Jacelyn. A UI/UX Developer and Graphic Artist.
           </div>
         </div>
@@ -68,7 +68,7 @@ function App() {
         maxWidth: '900px',
         margin: '0 auto 2.5rem auto',
         boxShadow: '0 4px 24px rgba(0,0,0,0.06)',
-        marginTop: '-2.5rem', // overlap hero
+        marginTop: '3.5rem', // move card farther below
         zIndex: 2,
         position: 'relative',
       }}>
