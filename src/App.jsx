@@ -4,7 +4,6 @@ import './App.css';
 import RevealCircle from './components/RevealCircle';
 import bgImg from './assets/img/JACELYN A. CARATAO (2).png';
 import nameImg from './assets/img/JACELYN A. CARATAO.png';
-import { BorderBeam } from './components/BorderBeam';
 
 function App() {
   return (
@@ -47,14 +46,14 @@ function App() {
         textAlign: 'center',
         zIndex: 1,
       }}>
-        {/* Move name image, intro text, and buttons up by 45% */}
+        {/* Move name image, intro text, and buttons up by 55% */}
         <div style={{ marginTop: '-45%' }}>
           <img src={nameImg} alt="Jacelyn A. Caratao" style={{ maxWidth: '420px', width: '90vw', height: 'auto', margin: '1.2rem 0 0.5rem 0' }} />
           <div style={{ color: '#b3005e', fontWeight: 500, fontSize: '1.5rem', marginBottom: '1.5rem' }}>
             Hi I'm Jacelyn. A UI/UX Developer and Graphic Artist.
           </div>
           {/* Button group just below the intro text, bigger buttons */}
-          <div style={{ display: 'flex', justifyContent: 'center', flexWrap: 'wrap', gap: '1.2rem', marginTop: '5%' }}>
+          <div style={{ display: 'flex', justifyContent: 'center', flexWrap: 'wrap', gap: '1.2rem', marginTop: '1.5rem' }}>
             <button className="bago-btn" style={{ padding: '20px 36px', fontSize: '1.15rem' }}>About</button>
             <button className="bago-btn" style={{ padding: '20px 36px', fontSize: '1.15rem' }}>Certs</button>
             <button className="bago-btn" style={{ padding: '20px 36px', fontSize: '1.15rem' }}>Projects</button>
@@ -64,40 +63,39 @@ function App() {
           </div>
         </div>
       </section>
-      {/* White Section with BorderBeam */}
-      <div className="relative" style={{ marginTop: '-30%', borderRadius: '24px', overflow: 'visible', maxWidth: '900px', marginLeft: 'auto', marginRight: 'auto' }}>
-        <section style={{
-          background: '#fff',
-          padding: '2.5rem 1rem',
-          borderRadius: '24px',
-          width: '100%',
-          boxShadow: '0 4px 24px rgba(0,0,0,0.06)',
-          zIndex: 2,
-          position: 'relative',
-        }}>
-          <BorderBeam className="rounded-[24px]" borderWidth={2} colorFrom="#ff69b4" colorTo="#ffb6e6" />
-          <h2 style={{ color: '#b3005e', fontWeight: 'bold', textAlign: 'center', marginBottom: '1rem', fontSize: '1.5rem' }}>
-            Hi I'm Jacelyn. A UI/UX Developer and Graphic Artist.
-          </h2>
-          <p style={{ color: '#b3005e', textAlign: 'center', marginBottom: '2rem', fontWeight: 500 }}>
-            Motivated 3rd-year Computer Science student studying in University of Caloocan City - North Campus with strong foundations in programming and UI/UX design. Actively involved in campus tech organizations and eager to apply problem-solving and teamwork skills in a hands-on internship environment.
-          </p>
-          <div style={{ display: 'flex', justifyContent: 'center', gap: '1.5rem', marginBottom: '2rem' }}>
-            <span style={{ color: '#b3005e', fontSize: '2rem', background: '#fff', borderRadius: '8px', padding: '0.3em 0.5em' }}>🌐</span>
-            <span style={{ color: '#b3005e', fontSize: '2rem', background: '#fff', borderRadius: '8px', padding: '0.3em 0.5em' }}>💼</span>
-            <span style={{ color: '#b3005e', fontSize: '2rem', background: '#fff', borderRadius: '8px', padding: '0.3em 0.5em' }}>📌</span>
-            <span style={{ color: '#b3005e', fontSize: '2rem', background: '#fff', borderRadius: '8px', padding: '0.3em 0.5em' }}>🎨</span>
-          </div>
-          <h3 style={{ color: '#b3005e', fontWeight: 'bold', textAlign: 'center', marginBottom: '1.5rem', fontSize: '1.2rem' }}>
-            Campus Involvement
-          </h3>
-          <div style={{ display: 'flex', justifyContent: 'center', gap: '1.5rem', flexWrap: 'wrap' }}>
-            <div className="bago-btn" style={{ minWidth: 180, textAlign: 'center' }}>SKILLS DEVELOPED</div>
-            <div className="bago-btn" style={{ minWidth: 180, textAlign: 'center' }}>SUBJECTS TAKEN</div>
-            <div className="bago-btn" style={{ minWidth: 180, textAlign: 'center' }}>ORGANIZATIONS</div>
-          </div>
-        </section>
-      </div>
+      {/* White Section */}
+      <section style={{
+        background: '#fff',
+        padding: '2.5rem 1rem',
+        borderRadius: '24px',
+        maxWidth: '900px',
+        margin: '0 auto 2.5rem auto',
+        boxShadow: '0 4px 24px rgba(0,0,0,0.06)',
+        marginTop: '-2.5rem', // overlap hero
+        zIndex: 2,
+        position: 'relative',
+      }}>
+        <h2 style={{ color: '#b3005e', fontWeight: 'bold', textAlign: 'center', marginBottom: '1rem', fontSize: '1.5rem' }}>
+          Hi I'm Jacelyn. A UI/UX Developer and Graphic Artist.
+        </h2>
+        <p style={{ color: '#b3005e', textAlign: 'center', marginBottom: '2rem', fontWeight: 500 }}>
+          Motivated 3rd-year Computer Science student studying in University of Caloocan City - North Campus with strong foundations in programming and UI/UX design. Actively involved in campus tech organizations and eager to apply problem-solving and teamwork skills in a hands-on internship environment.
+        </p>
+        <div style={{ display: 'flex', justifyContent: 'center', gap: '1.5rem', marginBottom: '2rem' }}>
+          <span style={{ color: '#b3005e', fontSize: '2rem', background: '#fff', borderRadius: '8px', padding: '0.3em 0.5em' }}>🌐</span>
+          <span style={{ color: '#b3005e', fontSize: '2rem', background: '#fff', borderRadius: '8px', padding: '0.3em 0.5em' }}>💼</span>
+          <span style={{ color: '#b3005e', fontSize: '2rem', background: '#fff', borderRadius: '8px', padding: '0.3em 0.5em' }}>📌</span>
+          <span style={{ color: '#b3005e', fontSize: '2rem', background: '#fff', borderRadius: '8px', padding: '0.3em 0.5em' }}>🎨</span>
+        </div>
+        <h3 style={{ color: '#b3005e', fontWeight: 'bold', textAlign: 'center', marginBottom: '1.5rem', fontSize: '1.2rem' }}>
+          Campus Involvement
+        </h3>
+        <div style={{ display: 'flex', justifyContent: 'center', gap: '1.5rem', flexWrap: 'wrap' }}>
+          <div className="bago-btn" style={{ minWidth: 180, textAlign: 'center' }}>SKILLS DEVELOPED</div>
+          <div className="bago-btn" style={{ minWidth: 180, textAlign: 'center' }}>SUBJECTS TAKEN</div>
+          <div className="bago-btn" style={{ minWidth: 180, textAlign: 'center' }}>ORGANIZATIONS</div>
+        </div>
+      </section>
     </div>
   );
 }
