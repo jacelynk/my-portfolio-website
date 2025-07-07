@@ -46,8 +46,8 @@ function App() {
         textAlign: 'center',
         zIndex: 1,
       }}>
-        {/* Move name image, intro text, and buttons up by 55% */}
-        <div style={{ marginTop: '-45%' }}>
+        {/* Move name image, intro text, and buttons up by 40% */}
+        <div style={{ marginTop: '-30%' }}>
           <img src={nameImg} alt="Jacelyn A. Caratao" style={{ maxWidth: '420px', width: '90vw', height: 'auto', margin: '1.2rem 0 0.5rem 0' }} />
           <div style={{ color: '#b3005e', fontWeight: 500, fontSize: '1.5rem', marginBottom: '1.5rem' }}>
             Hi I'm Jacelyn. A UI/UX Developer and Graphic Artist.
