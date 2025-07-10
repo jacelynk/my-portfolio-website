@@ -4,6 +4,7 @@ import './App.css';
 import RevealCircle from './components/RevealCircle';
 import bgImg from './assets/img/JACELYN A. CARATAO (2).png';
 import nameImg from './assets/img/JACELYN A. CARATAO.png';
+import { VelocityScroll } from './components/magicui/VelocityScroll';
 
 function App() {
   return (
@@ -40,40 +41,33 @@ function App() {
         alignItems: 'center',
         justifyContent: 'center',
         paddingTop: '0',
-        paddingBottom: '2.5rem',
+        paddingBottom: '1.5rem', // reduced bottom space
         marginTop: '0',
         position: 'relative',
         textAlign: 'center',
         zIndex: 1,
       }}>
-        {/* Move name image, intro text, and buttons up by 40% */}
-        <div style={{ marginTop: '-30%' }}>
+        {/* Move name image and intro text up by 40% */}
+        <div style={{ marginTop: '-48%' }}>
           <img src={nameImg} alt="Jacelyn A. Caratao" style={{ maxWidth: '420px', width: '90vw', height: 'auto', margin: '1.2rem 0 0.5rem 0' }} />
           <div style={{ color: '#b3005e', fontWeight: 500, fontSize: '1.5rem', marginBottom: '1.5rem' }}>
             Hi I'm Jacelyn. A UI/UX Developer and Graphic Artist.
           </div>
-          {/* Button group just below the intro text, bigger buttons */}
-          <div style={{ display: 'flex', justifyContent: 'center', flexWrap: 'wrap', gap: '1.2rem', marginTop: '1.5rem' }}>
-            <button className="bago-btn" style={{ padding: '20px 36px', fontSize: '1.15rem' }}>About</button>
-            <button className="bago-btn" style={{ padding: '20px 36px', fontSize: '1.15rem' }}>Certs</button>
-            <button className="bago-btn" style={{ padding: '20px 36px', fontSize: '1.15rem' }}>Projects</button>
-            <button className="bago-btn" style={{ padding: '20px 36px', fontSize: '1.15rem' }}>Art Works</button>
-            <button className="bago-btn" style={{ padding: '20px 36px', fontSize: '1.15rem' }}>Skills</button>
-            <button className="bago-btn" style={{ padding: '20px 36px', fontSize: '1.15rem' }}>Contact</button>
-          </div>
+          {/* Removed button group */}
         </div>
       </section>
-      {/* White Section */}
+      {/* Introduction Card below hero section, moved up slightly */}
       <section style={{
         background: '#fff',
         padding: '2.5rem 1rem',
         borderRadius: '24px',
         maxWidth: '900px',
-        margin: '0 auto 2.5rem auto',
+        margin: '0 auto 1.5rem auto',
         boxShadow: '0 4px 24px rgba(0,0,0,0.06)',
-        marginTop: '-2.5rem', // overlap hero
         zIndex: 2,
         position: 'relative',
+        transform: 'translateY(-105%)', // move up by 30%
+        transition: 'transform 0.3s',
       }}>
         <h2 style={{ color: '#b3005e', fontWeight: 'bold', textAlign: 'center', marginBottom: '1rem', fontSize: '1.5rem' }}>
           Hi I'm Jacelyn. A UI/UX Developer and Graphic Artist.
