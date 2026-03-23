@@ -1,7 +1,7 @@
 import { X, ExternalLink, Github } from 'lucide-react';
 import '../styles/Modal.css';
 
-function Modal({ isOpen, onClose, title, description, techStack, liveUrl, githubUrl, images, details }) {
+function Modal({ isOpen, onClose, title, description, techStack, liveUrl, githubUrl, images, details, roles }) {
   if (!isOpen) return null;
 
   return (
@@ -28,6 +28,17 @@ function Modal({ isOpen, onClose, title, description, techStack, liveUrl, github
           <div className="modal-description">
             <h3>Project Overview</h3>
             <p>{description}</p>
+            
+            {roles && (
+              <div className="modal-roles">
+                <h3>Roles</h3>
+                <div className="roles-list">
+                  {roles.map((role, index) => (
+                    <span key={index} className="role-tag">{role}</span>
+                  ))}
+                </div>
+              </div>
+            )}
             
             {details && (
               <div className="modal-details">

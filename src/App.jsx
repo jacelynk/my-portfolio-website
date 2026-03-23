@@ -35,65 +35,85 @@ function App() {
   };
 
   const projectData = {
-    wiki: {
-      title: 'KWIKI',
-      description: 'Knowledge management system designed for efficient information sharing and collaboration. This platform enables teams to create, organize, and share knowledge seamlessly.',
-      techStack: ['React', 'Node.js', 'MongoDB', 'Express', 'JWT'],
+    kWiki: {
+      title: 'K-WIKI',
+      description: 'A Korean Pop (K-POP) Wikipedia platform designed to organize and present comprehensive information about artists, groups, and industry trends through a clean and user-friendly interface.',
+      techStack: ['React', 'Node.js', 'MongoDB', 'Express', 'CSS'],
       liveUrl: '#',
       githubUrl: 'https://github.com/jacelynk',
-      images: ['Dashboard View', 'Document Editor', 'Search Interface'],
+      images: ['Dashboard View', 'Artist Profiles', 'Search Interface'],
       details: [
-        'Real-time collaboration features',
+        'Clean and user-friendly interface',
+        'Comprehensive artist and group information',
+        'Industry trends and news integration',
         'Advanced search and filtering',
-        'Document version control',
-        'User permission management',
         'Responsive design for all devices'
-      ]
-    },
-    sibol: {
-      title: 'SIBOL (Thesis)',
-      description: 'Academic thesis project focusing on innovative educational technology solutions to enhance learning experiences through digital platforms.',
-      techStack: ['Vue.js', 'Express', 'MySQL', 'Socket.io', 'Chart.js'],
-      liveUrl: '#',
-      githubUrl: 'https://github.com/jacelynk',
-      images: ['Learning Dashboard', 'Progress Tracking', 'Interactive Modules'],
-      details: [
-        'Interactive learning modules',
-        'Progress tracking and analytics',
-        'Gamification elements',
-        'Real-time student-teacher interaction',
-        'Comprehensive reporting system'
-      ]
+      ],
+      roles: ['Front-End Developer', 'Quality Assurance']
     },
     navigaze: {
       title: 'Navigaze',
-      description: 'Navigation and mapping application with intuitive user interface and real-time features for seamless location-based services.',
-      techStack: ['JavaScript', 'Map API', 'CSS', 'Geolocation API', 'PWA'],
+      description: 'An indoor navigation mobile application developed using Unity, integrating augmented reality and game-based elements to create an interactive and immersive user experience.',
+      techStack: ['Unity', 'C#', 'AR SDK', 'Mobile Development', 'Game Design'],
       liveUrl: '#',
       githubUrl: 'https://github.com/jacelynk',
-      images: ['Map Interface', 'Route Planning', 'Location Details'],
+      images: ['AR Navigation Interface', 'Game Elements', 'Mobile View'],
       details: [
-        'Real-time navigation',
-        'Offline mode support',
-        'Custom route planning',
-        'Points of interest integration',
-        'Voice navigation assistance'
-      ]
+        'Augmented reality integration',
+        'Game-based navigation elements',
+        'Interactive and immersive UX',
+        'Indoor positioning system',
+        'Mobile-optimized design'
+      ],
+      roles: ['Project Manager', 'Front-End Developer']
+    },
+    kopilism: {
+      title: 'Kopilism',
+      description: 'An inventory management system developed for Kopilism Co., aimed at streamlining product tracking, managing stock levels, and improving business operations.',
+      techStack: ['React', 'Node.js', 'MySQL', 'Express', 'REST API'],
+      liveUrl: '#',
+      githubUrl: 'https://github.com/jacelynk',
+      images: ['Inventory Dashboard', 'Stock Management', 'Analytics'],
+      details: [
+        'Real-time inventory tracking',
+        'Stock level management',
+        'Business operation optimization',
+        'Analytics and reporting',
+        'User-friendly admin interface'
+      ],
+      roles: ['Project Manager', 'System Analyst', 'Front-End Developer']
     },
     learnQuake: {
-      title: 'Learn Quake',
-      description: 'Educational platform designed to make learning interactive and engaging through gamification elements and adaptive learning paths.',
-      techStack: ['React', 'Firebase', 'Tailwind CSS', 'Game API', 'WebRTC'],
+      title: 'LearnQuake',
+      description: 'An earthquake information website that provides educational content, safety guidelines, and accessible data related to seismic activities.',
+      techStack: ['React', 'JavaScript', 'API Integration', 'Data Visualization', 'CSS'],
       liveUrl: '#',
       githubUrl: 'https://github.com/jacelynk',
-      images: ['Game Interface', 'Leaderboard', 'Learning Paths'],
+      images: ['Educational Dashboard', 'Safety Guidelines', 'Seismic Data'],
       details: [
-        'Adaptive learning algorithms',
-        'Multiplayer learning games',
-        'Achievement system',
-        'Progress analytics',
-        'Live study sessions'
-      ]
+        'Educational content delivery',
+        'Safety guidelines and protocols',
+        'Real-time seismic data',
+        'Data visualization',
+        'Accessible information design'
+      ],
+      roles: ['Project Manager', 'Front-End Developer', 'Researcher']
+    },
+    sibol: {
+      title: 'SIBOL (Thesis Project)',
+      description: 'A smart anaerobic digestion system that integrates IoT and AI-driven monitoring to convert biodegradable waste into renewable energy efficiently.',
+      techStack: ['Python', 'IoT Sensors', 'Machine Learning', 'Data Analytics', 'React'],
+      liveUrl: '#',
+      githubUrl: 'https://github.com/jacelynk',
+      images: ['System Dashboard', 'IoT Monitoring', 'Energy Analytics'],
+      details: [
+        'IoT sensor integration',
+        'AI-driven monitoring system',
+        'Biodegradable waste processing',
+        'Renewable energy conversion',
+        'Real-time data analytics'
+      ],
+      roles: ['Project Manager', 'Front-End Developer']
     }
   };
 
@@ -113,7 +133,7 @@ function App() {
               UI/UX Developer & Graphic Artist
             </p>
             <p className="hero-description">
-              Passionate UI/UX Developer & Graphic Artist creating beautiful, functional digital experiences with modern design and development expertise
+              Computer Science graduate from University of Caloocan City. I specialize in digital graphics, front-end development, data-driven solutions, quality assurance, and artificial intelligence, with a passion for creating intuitive and impactful digital experiences.
             </p>
             <div className="hero-buttons">
               <button className="btn" onClick={() => scrollToSection('projects')}>
@@ -248,9 +268,9 @@ function App() {
                 </div>
               </div>
               <div className="project-content">
-                <h3 className="project-title">KWIKI</h3>
+                <h3 className="project-title">K-WIKI</h3>
                 <p className="project-description">
-                  Knowledge management system designed for efficient information sharing and collaboration
+                  A Korean Pop (K-POP) Wikipedia platform designed to organize and present comprehensive information about artists, groups, and industry trends through a clean and user-friendly interface.
                 </p>
                 <div className="project-tech">
                   <span className="tech-tag">React</span>
@@ -258,7 +278,63 @@ function App() {
                   <span className="tech-tag">MongoDB</span>
                 </div>
                 <div className="project-links">
-                  <button onClick={() => openModal(projectData.wiki)} className="project-link see-more-btn">
+                  <button onClick={() => openModal(projectData.kWiki)} className="project-link see-more-btn">
+                    <ExternalLink size={16} />
+                    See More
+                  </button>
+                  <a href="https://github.com/jacelynk" className="project-link" target="_blank" rel="noopener noreferrer">
+                    <Github size={16} />
+                    Code
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div className="project-card card animate-fadeInUp">
+              <div className="project-image">
+                <div className="project-placeholder">
+                  <Palette size={48} />
+                </div>
+              </div>
+              <div className="project-content">
+                <h3 className="project-title">Navigaze</h3>
+                <p className="project-description">
+                  An indoor navigation mobile application developed using Unity, integrating augmented reality and game-based elements to create an interactive and immersive user experience.
+                </p>
+                <div className="project-tech">
+                  <span className="tech-tag">Unity</span>
+                  <span className="tech-tag">C#</span>
+                  <span className="tech-tag">AR SDK</span>
+                </div>
+                <div className="project-links">
+                  <button onClick={() => openModal(projectData.navigaze)} className="project-link see-more-btn">
+                    <ExternalLink size={16} />
+                    See More
+                  </button>
+                  <a href="https://github.com/jacelynk" className="project-link" target="_blank" rel="noopener noreferrer">
+                    <Github size={16} />
+                    Code
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div className="project-card card animate-fadeInUp">
+              <div className="project-image">
+                <div className="project-placeholder">
+                  <Code size={48} />
+                </div>
+              </div>
+              <div className="project-content">
+                <h3 className="project-title">Kopilism</h3>
+                <p className="project-description">
+                  An inventory management system developed for Kopilism Co., aimed at streamlining product tracking, managing stock levels, and improving business operations.
+                </p>
+                <div className="project-tech">
+                  <span className="tech-tag">React</span>
+                  <span className="tech-tag">Node.js</span>
+                  <span className="tech-tag">MySQL</span>
+                </div>
+                <div className="project-links">
+                  <button onClick={() => openModal(projectData.kopilism)} className="project-link see-more-btn">
                     <ExternalLink size={16} />
                     See More
                   </button>
@@ -278,12 +354,12 @@ function App() {
               <div className="project-content">
                 <h3 className="project-title">SIBOL (Thesis)</h3>
                 <p className="project-description">
-                  Academic thesis project focusing on innovative educational technology solutions
+                  A smart anaerobic digestion system that integrates IoT and AI-driven monitoring to convert biodegradable waste into renewable energy efficiently.
                 </p>
                 <div className="project-tech">
-                  <span className="tech-tag">Vue.js</span>
-                  <span className="tech-tag">Express</span>
-                  <span className="tech-tag">MySQL</span>
+                  <span className="tech-tag">Python</span>
+                  <span className="tech-tag">IoT Sensors</span>
+                  <span className="tech-tag">Machine Learning</span>
                 </div>
                 <div className="project-links">
                   <button onClick={() => openModal(projectData.sibol)} className="project-link see-more-btn">
@@ -292,35 +368,7 @@ function App() {
                   </button>
                   <a href="https://github.com/jacelynk" className="project-link" target="_blank" rel="noopener noreferrer">
                     <Github size={16} />
-                    Research
-                  </a>
-                </div>
-              </div>
-            </div>
-            <div className="project-card card animate-fadeInUp">
-              <div className="project-image">
-                <div className="project-placeholder">
-                  <Palette size={48} />
-                </div>
-              </div>
-              <div className="project-content">
-                <h3 className="project-title">Navigaze</h3>
-                <p className="project-description">
-                  Navigation and mapping application with intuitive user interface and real-time features
-                </p>
-                <div className="project-tech">
-                  <span className="tech-tag">JavaScript</span>
-                  <span className="tech-tag">Map API</span>
-                  <span className="tech-tag">CSS</span>
-                </div>
-                <div className="project-links">
-                  <button onClick={() => openModal(projectData.navigaze)} className="project-link see-more-btn">
-                    <ExternalLink size={16} />
-                    See More
-                  </button>
-                  <a href="https://github.com/jacelynk" className="project-link" target="_blank" rel="noopener noreferrer">
-                    <Github size={16} />
-                    Source
+                    Code
                   </a>
                 </div>
               </div>
@@ -332,14 +380,14 @@ function App() {
                 </div>
               </div>
               <div className="project-content">
-                <h3 className="project-title">Learn Quake</h3>
+                <h3 className="project-title">LearnQuake</h3>
                 <p className="project-description">
-                  Educational platform designed to make learning interactive and engaging through gamification
+                  An earthquake information website that provides educational content, safety guidelines, and accessible data related to seismic activities.
                 </p>
                 <div className="project-tech">
                   <span className="tech-tag">React</span>
-                  <span className="tech-tag">Firebase</span>
-                  <span className="tech-tag">Tailwind CSS</span>
+                  <span className="tech-tag">JavaScript</span>
+                  <span className="tech-tag">API Integration</span>
                 </div>
                 <div className="project-links">
                   <button onClick={() => openModal(projectData.learnQuake)} className="project-link see-more-btn">

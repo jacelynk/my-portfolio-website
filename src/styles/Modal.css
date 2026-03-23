@@ -104,6 +104,32 @@
   margin-bottom: 1.5rem;
 }
 
+.modal-roles {
+  margin-bottom: 2rem;
+}
+
+.modal-roles h3 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: var(--dark);
+  margin-bottom: 1rem;
+}
+
+.roles-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.role-tag {
+  background: var(--gradient);
+  color: white;
+  padding: 0.4rem 0.8rem;
+  border-radius: 1rem;
+  font-size: 0.85rem;
+  font-weight: 500;
+}
+
 .modal-details {
   margin-top: 1.5rem;
 }
