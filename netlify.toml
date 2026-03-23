@@ -1,13 +1,13 @@
 [build]
-  command = "npm run build"
+  base = ""
+  command = "bash build.sh"
   publish = "dist"
 
 [build.environment]
+  NPM_VERSION = "8"
   NODE_VERSION = "18"
 
 [[redirects]]
   from = "/*"
   to = "/index.html"
   status = 200
-
-# Netlify configuration for portfolio deployment
