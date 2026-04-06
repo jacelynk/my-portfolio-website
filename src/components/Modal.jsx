@@ -1,7 +1,7 @@
 import { X, ExternalLink, Github } from 'lucide-react';
 import '../styles/Modal.css';
 
-function Modal({ isOpen, onClose, title, description, techStack, liveUrl, githubUrl, images, details, roles }) {
+function Modal({ isOpen, onClose, title, description, techStack, liveUrl, githubUrl, images, details, roles, awards }) {
   if (!isOpen) return null;
 
   return (
@@ -18,8 +18,16 @@ function Modal({ isOpen, onClose, title, description, techStack, liveUrl, github
           {images && images.length > 0 && (
             <div className="modal-images">
               {images.map((image, index) => (
-                <div key={index} className="modal-image-placeholder">
-                  <div className="image-text">{image}</div>
+                <div key={index} className="modal-image-item">
+                  <img 
+                    src={image.src} 
+                    alt={image.alt}
+                    className="modal-project-image"
+                    onError={(e) => {
+                      e.target.src = `https://picsum.photos/seed/${image.alt}/400/300.jpg`;
+                    }}
+                  />
+                  <div className="image-caption">{image.alt}</div>
                 </div>
               ))}
             </div>
@@ -48,6 +56,17 @@ function Modal({ isOpen, onClose, title, description, techStack, liveUrl, github
                     <li key={index}>{detail}</li>
                   ))}
                 </ul>
+              </div>
+            )}
+            
+            {awards && (
+              <div className="modal-awards">
+                <h3>Awards & Recognition</h3>
+                <div className="awards-list">
+                  {awards.map((award, index) => (
+                    <span key={index} className="award-tag">{award}</span>
+                  ))}
+                </div>
               </div>
             )}
           </div>

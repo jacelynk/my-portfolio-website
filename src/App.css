@@ -1,3 +1,80 @@
+/* Design Thumbnail Styles */
+.design-thumbnail {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: var(--radius);
+  transition: var(--transition);
+}
+
+.design-thumbnail:hover {
+  transform: scale(1.05);
+}
+
+/* Project Card Image Container */
+.project-image {
+  position: relative;
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
+  border-radius: var(--radius);
+  margin-bottom: 1rem;
+}
+
+.project-image .project-placeholder {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--gradient);
+  color: white;
+  border-radius: var(--radius);
+}
+
+/* Project Links Alignment */
+.project-links {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+}
+
+.project-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 1rem;
+  background: var(--gradient);
+  color: white;
+  text-decoration: none;
+  border-radius: var(--radius);
+  font-size: 0.9rem;
+  font-weight: 500;
+  transition: var(--transition);
+  border: none;
+  cursor: pointer;
+}
+
+.project-link:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-lg);
+}
+
+.see-more-btn {
+  min-width: 120px;
+  justify-content: center;
+}
+
+/* Lower See More button by 25% */
+.text-center.mt-8 {
+  margin-top: 2rem !important;
+}
+
 /* Modern App Layout Styles */
 
 /* Text Gradient */
@@ -98,21 +175,32 @@
   transform: translateY(-8px);
 }
 
-.profile-img-placeholder {
-  width: 180px;
-  height: 180px;
+.profile-image {
+  width: 169px;
+  height: 169px;
   border-radius: 50%;
-  background: var(--gradient);
+  overflow: hidden;
   display: flex;
   align-items: center;
   justify-content: center;
-  margin: 0 auto 1rem;
+  background: var(--gradient);
+  position: relative;
+  border: 3px solid white;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.profile-photo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
 }
 
 .profile-initials {
   font-size: 2.5rem;
   font-weight: 700;
   color: white;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .scroll-indicator {
@@ -340,7 +428,10 @@
 
 .project-links {
   display: flex;
-  gap: 1rem;
+  gap: 0.5rem;
+  align-items: center;
+  justify-content: flex-start;
+  flex-wrap: wrap;
 }
 
 .project-link {
@@ -367,6 +458,8 @@
   background: var(--gradient);
   color: white !important;
   border: 1px solid transparent;
+  min-width: 120px;
+  justify-content: center;
 }
 
 .see-more-btn:hover {
